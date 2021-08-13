@@ -1,4 +1,83 @@
-
 /* -----------Google fonts------------- */
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap');
 
+
+body{
+  background: #14dbba;
+}
+
+
+.container-fluid .mycard {
+  /* trying neumorphism========= */
+  /* border-radius: 50px;
+  background: #ffb52e;
+  box-shadow: 25px 25px 49px #d99a27,
+  -25px -25px 49px #ffd035; */
+
+  /* border-radius: 10px;
+  background: linear-gradient(to bottom, , ); */
+
+  border-radius: 20px;
+  background: #14dbba;
+  box-shadow: 5px 5px 15px #11ba9e,
+  -5px -5px 15px #17fcd6;
+
+  position: relative;
+  width: 300px;
+  height: 250px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s ease-in-out;
+}
+
+.container-fluid .mycard:hover {
+  height: 400px;
+  /* increase this height if u want to add social media icons*/
+}
+
+.container-fluid .mycard .cimg {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  /* 260px & make image height 260px*/
+  width: 270px;
+  top: -60px;
+}
+
+.container-fluid .mycard .cimg img {
+  max-width: 100%;
+  border-radius: 10px;
+  /* border-radius: 50px; */
+  object-fit: cover;
+}
+
+.container-fluid .mycard .cdetails {
+  color: #fff;
+  margin-top: 1.2rem;
+  text-align: center;
+  position: relative;
+  margin-top: -160px;
+  /* it was -160px */
+  padding: 10px 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.container-fluid .mycard .cdetails .social-icons a {
+  font-size: large;
+  padding: 10px 12px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.container-fluid .mycard:hover .cdetails {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -50px;
+}
